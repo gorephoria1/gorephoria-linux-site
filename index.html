@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorephoria Linux | High-Performance Distro</title>
+    <style>
+        :root {
+            --bg-color: #0f141c;
+            --text-color: #e2e8f0;
+            --accent-color: #ff3e3e; /* Dark crimson accent */
+            --card-bg: #1a2332;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(180deg, #161f30 0%, var(--bg-color) 100%);
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+        .tagline {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            margin-top: 0.5rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 1.5rem;
+            transition: opacity 0.2s;
+        }
+        .cta-btn:hover {
+            opacity: 0.9;
+        }
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #2e3d52;
+        }
+        .card h3 { margin-top: 0; color: #ffffff; }
+        code {
+            background-color: #000000;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #f87171;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gorephoria Linux</h1>
+        <p class="tagline">An arch based Linux distribution that i made ig.</p>
+        <a href="#" class="cta-btn">Download ISO</a>
+    </header>
+
+    <main>
+        <h2>Why Gorephoria?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ Speed & Efficiency</h3>
+                <p>Minimal background processes or bloatware. Built to run lean and extract maximum hardware performance.</p>
+            </div>
+            <div class="card">
+                <h3>🛠️ Highly Customizable</h3>
+                <p>Tailored configurations out of the box, allowing you to shape the environment around your workflow.</p>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 3rem;">Quick Install Template</h2>
+        <p>To burn your image via terminal, locate your drive and run:</p>
+        <pre style="background: #000; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>sudo dd bs=4M if=gorephoria.iso of=/dev/sdX status=progress oflag=sync</code></pre>
+    </main>
+
+    <footer>
+        &copy; 2026 Gorephoria Linux Project. Hosted on Vercel.
+    </footer>
+
+</body>
+</html>
+
