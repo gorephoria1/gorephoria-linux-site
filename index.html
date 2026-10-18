@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorephoria Linux | Arch-Based Powerhouse</title>
+    <!-- Include Supabase JS Client Library -->
+    <script src="https://jsdelivr.net"></script>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #ff2a2a;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 6rem 2rem 4rem 2rem;
+            background: linear-gradient(180deg, #1f1919 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+        .tagline {
+            font-size: 1.3rem;
+            color: #8b949e;
+            margin-top: 0.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #21262d;
+            color: #58a6ff;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid var(--border-color);
+            margin-top: 1rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 14px rgba(255, 42, 42, 0.4);
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        h2 { color: #ffffff; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 3rem; }
+        .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+        @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+        .card { background-color: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+        .card h3 { margin-top: 0; color: #ffffff; }
+        pre { background: #000000; padding: 1.2rem; border-radius: 6px; border: 1px solid var(--border-color); }
+        footer { text-align: center; padding: 4rem 2rem; color: #484f58; font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Gorephoria Linux</h1>
+        <p class="tagline">An Arch-based distribution built for security auditing, software development, and maximum gaming performance.</p>
+        <div class="badge">🌀 Powered by XFCE4 Lightweight Desktop</div>
+        <br>
+        <a href="YOUR_GITHUB_ISO_LINK_HERE" class="cta-btn">Download Gorephoria ISO (1.5 GB)</a>
+    </header>
+
+    <main>
+        <h2>Built-In Toolkits</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🛡️ Advanced Pentesting</h3>
+                <p>Pre-configured security auditing and network testing utilities ready right out of the box.</p>
+            </div>
+            <div class="card">
+                <h3>💻 Dev-Ready Environment</h3>
+                <p>Packed with popular compilers, runtimes, and build essential packages to jump straight into programming.</p>
+            </div>
+            <div class="card">
+                <h3>🎮 Optimized for Gaming</h3>
+                <p>Includes essential gaming drivers and performance tweaks, backed by a lightweight desktop environment to save hardware overhead.</p>
+            </div>
+            <div class="card">
+                <h3>🚀 Arch Linux Foundation</h3>
+                <p>Rolling-release system giving you bleeding-edge access to the latest packages and the massive Arch User Repository (AUR).</p>
+            </div>
+        </div>
+
+        <h2>Flash & Install Guide</h2>
+        <p>After downloading, verify your file size matches 1.5 GB. Burn the ISO safely to your USB drive using terminal commands:</p>
+        <pre><code>sudo dd bs=4M if=gorephoria.iso of=/dev/sdX status=progress oflag=sync</code></pre>
+
+        <!-- Community Review Form -->
+        <h2>Community Reviews</h2>
+        <form id="reviewForm" style="background: var(--card-bg); padding: 2rem; border-radius: 8px; border: 1px solid var(--border-color);">
+            <label style="display:block; margin-bottom: 0.5rem;">Your Name / Handle:</label>
+            <input type="text" id="reviewerName" required style="width:100%; padding:0.5rem; background:#000; border:1px solid var(--border-color); color:#fff; border-radius:4px; margin-bottom:1rem; box-sizing:border-box;">
+
+            <label style="display:block; margin-bottom: 0.5rem;">Rating:</label>
+            <select id="reviewRating" style="width:100%; padding:0.5rem; background:#000; border:1px solid var(--border-color); color:#fff; border-radius:4px; margin-bottom:1rem;">
+                <option value="5">⭐⭐⭐⭐⭐ (5 - Incredible Distro)</option>
+                <option value="4">⭐⭐⭐⭐ (4 - Great Experience)</option>
+                <option value="3">⭐⭐⭐ (3 - Decent / Average)</option>
+                <option value="2">⭐⭐ (2 - Needs Heavy Optimization)</option>
+                <option value="1">⭐ (1 - Unusable / Broken)</option>
+            </select>
+
+            <label style="display:block; margin-bottom: 0.5rem;">Review Details:</label>
+            <textarea id="reviewText" rows="4" required style="width:100%; padding:0.5rem; background:#000; border:1px solid var(--border-color); color:#fff; border-radius:4px; margin-bottom:1.5rem; box-sizing:border-box; resize:vertical;"></textarea>
+
+            <button type="submit" style="background:var(--accent-color); color:#fff; border:none; padding:0.7rem 2rem; font-weight:bold; border-radius:4px; cursor:pointer;">Submit Review</button>
+        </form>
+
+        <h3 style="margin-top: 3rem;">What Users Are Saying</h3>
+        <div id="reviewsFeed">Loading community reviews...</div>
+    </main>
+
+    <footer>
+        &copy; 2026 Gorephoria Linux Project. Built with speed. Hosted on Vercel.
+    </footer>
+
+    <script>
+        // STEP 3: INITIALIZE SUPABASE
+        // Replace these placeholders with the keys from your Supabase Project Settings > API screen
+        const SUPABASE_URL = 'https://supabase.co';
+        const SUPABASE_ANON_KEY = 'your-anon-public-key';
+        
+        const supabase = src = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Fetch and stream existing reviews live
+        async function loadReviews() {
+            const feed = document.getElementById('reviewsFeed');
+            
+            const { data: reviews, error } = await supabase
+                .from('reviews')
+                .select('name, rating, comment')
+                .order('created_at', { ascending: false });
+
+            if (error) {
+                feed.innerHTML = '<p style="color: #ff3e3e;">Failed to load reviews.</p>';
+                return;
+            }
+
+            if (!reviews || reviews.length === 0) {
+                feed.innerHTML = '<p style="color: #64748b;">No reviews yet. Be the first to try Gorephoria Linux!</p>';
+                return;
+            }
+
+            feed.innerHTML = reviews.map(r => `
+                <div style="background: #161b22; padding: 1rem; border-radius: 6px; border: 1px solid #30363d; margin-bottom: 1rem;">
+                    <strong>${escapeHTML(r.name)}</strong> 
+                    <span style="color: #ffb700;">${'⭐'.repeat(r.rating)}</span>
+                    <p style="margin: 0.5rem 0 0 0; color: #e2e8f0;">${escapeHTML(r.comment)}</p>
+                </div>
+            `).join('');
+        }
+
+        // Send submission to database
+        document.getElementById('reviewForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            btn.innerText = 'Submitting...';
+
+            const name = document.getElementById('reviewerName').value;
+            const rating = parseInt(document.getElementById('reviewRating').value);
+            const comment = document.getElementById('reviewText').value;
+
+            const { error } = await supabase
+                .from('reviews')
+                .insert([{ name, rating, comment }]);
+
+            if (!error) {
+                document.getElementById('reviewerName').value = '';
+                document.getElementById('reviewText').value = '';
+                loadReviews();
+            } else {
+                alert('Error submitting review: ' + error.message);
+            }
+            btn.innerText = 'Submit Review';
+        });
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+        }
+
+        // Initialize feed
+        loadReviews();
+    </script>
+</body>
+</html>
+
